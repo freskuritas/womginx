@@ -28,7 +28,7 @@ RUN ./docker-sed.sh
 FROM nginx:stable-alpine
 
 # default environment variables in case a normal user doesn't specify it
-ENV PORT=80
+ENV PORT=8000
 # set SAFE_BROWSING to any value to enable it
 #ENV SAFE_BROWSING=1
 
