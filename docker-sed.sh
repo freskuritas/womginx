@@ -7,7 +7,7 @@ sed -i "s/\/home\/binary\/womginx\/public/\/opt\/womginx\/public/g" nginx.conf
 
 # disable ssl (since we're running this behind a reverse proxy like heroku)
 sed -i '/ssl_certificate/d' nginx.conf
-sed -i '/listen 443/d' nginx.conf
+sed -i '/listen 8000/d' nginx.conf
 
 # prevent reverse proxy headers from being sent to destination site (heroku headers, for example)
 sed -i $"s/proxy_set_header Accept-Encoding/proxy_set_header x-request-id '';\
